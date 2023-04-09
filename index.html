@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="./img/img1.jpeg" alt="img1...." />
+        <img src="./img/img2.jpeg" alt="img2...." />
+        <img src="./img/img3.jpeg" alt="img3...." />
+        <img src="./img/img4.jpeg" alt="img4...." />
+      </div>
+      <button class="prev-button">&lt;</button>
+      <button class="next-button">&gt;</button>
+    </div>
+    <div class="tab">
+      <button
+        class="tablinks"
+        onclick="openCity(event, 'London')"
+        id="defaultOpen1"
+      >
+        Introduce
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">About</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+        Contact
+      </button>
+    </div>
+
+    <div id="London" class="tabcontent-veritical">
+      <h3>Introduce</h3>
+      <p>
+        Hanoi's weather has four distinct seasons with a spring bringing drizzly
+        rains, summer with hot winds, autumn with light sunshine with the
+        fragrance of milk flowers all over the streets, and winter in Hanoi.
+        Hanoi is the cold that cuts the skin and cuts the meat. The winter is so
+        cold, so harsh, but there are many tourists who still love and miss a
+        winter in Hanoi because the moment of season change with many emotions
+        makes visitors more lingering and longing for a winter. very special
+        season of the land of the period.
+      </p>
+    </div>
+
+    <div id="Paris" class="tabcontent-veritical">
+      <span>
+        <button class="tablink" onclick="openPage('Home', this, '#C41E3A')">
+          Spring
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('News', this, '#C41E3A')"
+          id="defaultOpen2"
+        >
+          Summer
+        </button>
+        <button class="tablink" onclick="openPage('Contact', this, '#C41E3A')">
+          Autumn
+        </button>
+        <button class="tablink" onclick="openPage('About', this, '#C41E3A')">
+          Winter
+        </button>
+
+        <div id="Home" class="tabcontent">
+          <h3>Spring</h3>
+          <p>
+            Spring is the season that everyone looks forward to. This is the
+            season of trees sprouting buds full of life. The weather is a bit
+            cold and sometimes a little drizzly. Drops of water glistening on
+            the leaves. Birds chirping to welcome the new day. In the spring, my
+            family often cleans the house to prepare for Tet
+          </p>
+        </div>
+
+        <div id="News" class="tabcontent">
+          <h3>Summer</h3>
+          <p>
+            Summer is one of the four commonly recognized seasons in temperate
+            and subarctic regions. Summer is the hottest season of the year and
+            it happens sometime after spring and before autumn. On the summer
+            solstice, the day is the longest and the night the shortest, and
+            from after the solstice the length of the day begins to decrease.
+          </p>
+        </div>
+
+        <div id="Contact" class="tabcontent">
+          <h3>Autumn</h3>
+          <p>
+            Autumn is the season in which most crops are harvested and deciduous
+            trees lose their leaves. It is also the season in which daylight
+            gets shorter and colder (especially at high latitudes). In temperate
+            regions, rainfall is also gradually increasing in some areas.
+          </p>
+        </div>
+
+        <div id="About" class="tabcontent">
+          <h3>Winter</h3>
+          <p>
+            On the days when the seasons change, bringing with them cold winds
+            is the time to signal a winter is coming all over the streets of
+            Hanoi capital. Every morning when going to the street, visitors will
+            feel the cold gradually seep into each finger, in each breath and in
+            a gloomy landscape like Western European countries.
+          </p>
+        </div>
+      </span>
+    </div>
+
+    <div id="Tokyo" class="tabcontent-veritical">
+      <h3>About</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
