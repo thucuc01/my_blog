@@ -1,6 +1,6 @@
 let items = [
   {
-    url: "./img/cat1.jpg",
+    url: "./img/cat1.jpeg",
 
     price: 1200000,
 
@@ -10,7 +10,7 @@ let items = [
   },
 
   {
-    url: "./img/cat1.jpg",
+    url: "./img/cat1.jpeg",
 
     price: 1200000,
 
@@ -20,7 +20,7 @@ let items = [
   },
 
   {
-    url: "./img/cat1.jpg",
+    url: "./img/cat1.jpeg",
 
     price: 1200000,
 
@@ -30,7 +30,7 @@ let items = [
   },
 
   {
-    url: "./img/cat2.jpg",
+    url: "./img/cat2.jpeg",
 
     price: 1200000,
 
@@ -40,7 +40,7 @@ let items = [
   },
 
   {
-    url: "./img/cat2.jpg",
+    url: "./img/cat3.jpeg",
 
     price: 1200000,
 
@@ -50,7 +50,7 @@ let items = [
   },
 
   {
-    url: "./img/cat3.jpg",
+    url: "./img/cat4.jpeg",
 
     price: 1200000,
 
@@ -60,7 +60,7 @@ let items = [
   },
 
   {
-    url: "./img/cat1.jpg",
+    url: "./img/cat1.jpeg",
 
     price: 1200000,
 
@@ -70,7 +70,7 @@ let items = [
   },
 
   {
-    url: "./img/cat1.jpg",
+    url: "./img/cat1.jpeg",
 
     price: 1200000,
 
@@ -80,7 +80,7 @@ let items = [
   },
 
   {
-    url: "./img/cat1.jpg",
+    url: "./img/cat1.jpEg",
 
     price: 1200000,
 
@@ -115,7 +115,7 @@ for (let index = 0; index < items.length; index++) {
   <p class="card-text">Some example text.</p>
   
    <h6>Price : ` +
-    element.toLocaleString("it-IT", { style: "currency", currency: "VND" }) +
+    element.price.toLocaleString("it-IT", { style: "currency", currency: "VND" }) +
     `</h6>
   
    <h6>Quantity: ` +
