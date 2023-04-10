@@ -1,64 +1,142 @@
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-let counter = 0;
+let items = [
+  {
+    url: "./img/cat1.jpg",
 
-prevButton.addEventListener('click', () => {
-  counter--;
-  if (counter < 0) {
-    counter = 3;
-  }
-  carousel.style.transform = `translateX(-${counter * 25}%)`;
-});
+    price: 1200000,
 
-nextButton.addEventListener('click', () => {
-  counter++;
-  if (counter > 3) {
-    counter = 0;
-  }
-  carousel.style.transform = `translateX(-${counter * 25}%)`;
-});
-// const carousel = document.querySelector('.carousel');
-// let counter = 0;
+    des: "Some example text.",
 
-setInterval(() => {
-  counter++;
-  if (counter > 3) {
-    counter = 0;
+    quantity: 15,
+  },
+
+  {
+    url: "./img/cat1.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 10,
+  },
+
+  {
+    url: "./img/cat1.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 5,
+  },
+
+  {
+    url: "./img/cat2.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 8,
+  },
+
+  {
+    url: "./img/cat2.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 1,
+  },
+
+  {
+    url: "./img/cat3.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 15,
+  },
+
+  {
+    url: "./img/cat1.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 0,
+  },
+
+  {
+    url: "./img/cat1.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 15,
+  },
+
+  {
+    url: "./img/cat1.jpg",
+
+    price: 1200000,
+
+    des: "Some example text.",
+
+    quantity: 15,
+  },
+];
+
+let productElement = "";
+
+for (let index = 0; index < items.length; index++) {
+  const element = items[index];
+
+  if (index % 3 == 0) {
+    productElement += `<div class="row">`;
   }
-  carousel.style.transform = `translateX(-${counter * 25}%)`;
-}, 5000);
-function openPage(pageName,elmnt,color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
-  }
+
+  productElement +=
+    `<div class="col item-product">
   
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen1").click();
+   <div class="card">
   
+   <img class="card-img-top" src="` +
+    element.url +
+    `" alt="Card image" />
+  
+   <div class="card-body">
+  
+   <h4 class="card-title">John Doe</h4>
+  
+  <p class="card-text">Some example text.</p>
+  
+   <h6>Price : ` +
+    element.toLocaleString("it-IT", { style: "currency", currency: "VND" }) +
+    `</h6>
+  
+   <h6>Quantity: ` +
+    element.quantity +
+    `</h6>`;
 
-  function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent-veritical");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
+  productElement += element.quantity
+    ? `<a href="productDetail.html" class="btn btn-primary" > Chi tiết </a>`
+    : `<a href="#" class="btn btn-dark disabled"> Hết hàng </a>`;
+
+  productElement += ` </div>
   
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen2").click();
+   </div>
+  
+  </div>`;
+
+  if (index % 3 == 2) {
+    productElement += `</div>`;
+  }
+}
+
+let listProductDOM = document.querySelector(".list-product");
+
+listProductDOM.innerHTML = productElement;
