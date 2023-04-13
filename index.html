@@ -34,6 +34,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#Contact">Liên hệ</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutPet.html">Cẩm nang chăm sóc thú cưng</a>
+            </li>
           </ul>
           <!-- <form class="d-flex"> <input class="form-control me-2" type="text" placeholder="Search" /> <button class="btn btn-primary" type="button">Search</button> </form> -->
         </div>
@@ -103,69 +106,65 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
-      <div >
+      <div>
         <div class="container">
-          <div class="row"><h1 class="title-product">Sản phẩm mới</h1></div>
           <div class="row">
-            <div class="col item-product">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="./img/cat2.jpeg"
-                  alt="Card image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text.</p>
-                  <a href="productDetail.html" class="btn btn-primary"
-                    >Chi tiết</a
-                  >
-                </div>
-              </div>
+            <h1 class="title-product">Sản phẩm bán chạy</h1>
+          </div>
+
+          
+            <div class="featured-products">
+
+
+
             </div>
-            <div class="col item-product">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="./img/cat3.jpeg"
-                  alt="Card image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text.</p>
-                  <a href="productDetail.html" class="btn btn-primary"
-                    >Chi tiết</a
-                  >
-                </div>
+          
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Chi tiết sản phẩm</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
               </div>
-            </div>
-            <div class="col item-product">
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="./img/cat4.jpeg"
-                  alt="Card image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">Some example text.</p>
-                  <a href="productDetail.html" class="btn btn-primary"
-                    >Chi tiết</a
-                  >
-                </div>
+
+              <!-- Modal body -->
+              <div class="modal-body"></div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>
+          <!-- end modal -->
+
+          <!-- <div class="featured-products"></div> -->
         </div>
       </div>
     </div>
-    <div id="Product" >
+    <div id="Product">
       <div class="container">
         <div class="row"><h1 class="title-product">Sản phẩm</h1></div>
-        <div class="list-product"></div>
+        <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+          <div class="list-product"></div>
+        </button>
       </div>
     </div>
-    <div id="Contact" >
+    <div id="Contact">
       <div class="container">
         <div class="row">
           <div class="col-5">
