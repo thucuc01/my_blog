@@ -83,7 +83,7 @@ let items = [
   {
     url: "./img/cat2.jpeg",
     name: "Mèo 10",
-    price: 1690000,
+    price: 1290000,
     des: "detailed description Some example text 4.",
     quantity: 8,
     quantitySold: 7,
@@ -91,7 +91,7 @@ let items = [
   {
     url: "./img/cat2.jpeg",
     name: "Mèo 11",
-    price: 1690000,
+    price: 1490000,
     des: "detailed description Some example text 4.",
     quantity: 1,
     quantitySold: 14,
@@ -99,7 +99,7 @@ let items = [
   {
     url: "./img/cat2.jpeg",
     name: "Mèo 12",
-    price: 1690000,
+    price: 1530000,
     des: "detailed description Some example text 4.",
     quantity: 8,
     quantitySold: 7,
@@ -157,7 +157,7 @@ function getProductElement(items) {
 }
 let listProductDOM = document.querySelector(".list-product");
 listProductDOM.innerHTML = getProductElement(items) ?? "";
-let productSortbyQuantitySold = items.sort(
+let productSortbyQuantitySold = JSON.parse(JSON. stringify(items)).sort(
   (e1, e2) => e2.quantitySold - e1.quantitySold
 );
 let [item1, item2, item3, ...arr] = productSortbyQuantitySold;
@@ -170,9 +170,16 @@ featuredProductsDOM.innerHTML = getProductElement(
 let detailProductDOM = document.querySelector(".modal-body");
 
 function showDetail(index,lg) {
-  console.log(index,lg);
+  console.log(lg);
+  console.log(index);
+  console.log(items,'items');
   let elementDetail = "";
-  let element = lg=== items.length ? items[index] : featuredProducts[index];
+  let element={}
+  if(lg===3){
+    element=featuredProducts[index];
+  }else{
+    element=items[index] 
+  }
 
   elementDetail +=
     `<div class="col item-product"> 
